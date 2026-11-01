@@ -1,6 +1,6 @@
 package dd.ia2.benhayoun.tp0benhayounsadafi.jsf;
 
-import dd.ia2.benhayoun.tp0benhayounsadafi.jsf.service.GenerateurReponse;
+import dd.ia2.benhayoun.tp0benhayounsadafi.service.GenerateurReponse;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.model.SelectItem;
@@ -12,7 +12,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
 /**
  * Backing bean pour la page JSF index.xhtml.
  * Portée view pour conserver l'état de la conversation qui dure pendant plusieurs requêtes HTTP.
