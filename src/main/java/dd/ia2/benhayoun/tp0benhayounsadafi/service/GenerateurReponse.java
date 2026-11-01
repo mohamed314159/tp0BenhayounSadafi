@@ -28,9 +28,69 @@ public class GenerateurReponse implements Serializable { // Serializable car CDI
         if (!this.roleSystemeAffiche && roleSysteme != null) {
             // Ajouter le rôle système en majuscule au début du résultat, suivi d'un saut de ligne.
             resultat += roleSysteme.toUpperCase(Locale.FRENCH) + "\n";
-            this.roleSystemAffiche = true;
+            this.roleSystemeAffiche = true;
         }
-        resultat += question.toLowerCase(Locale.FRENCH) + "||";
+        for(int i=0; i < question.toLowerCase(Locale.FRENCH).length(); i++)
+        {
+            switch (question.toLowerCase(Locale.FRENCH).charAt(i))
+            {
+                case 'a': resultat += "1\uFE0F ";
+                    break;
+                case 'b': resultat += "2\uFE0F ";
+                    break;
+                case 'c': resultat += "3\uFE0F ";
+                    break;
+                case 'd': resultat += "4\uFE0F ";
+                    break;
+                case 'e': resultat += "5\uFE0F ";
+                    break;
+                case 'f': resultat += "6\uFE0F ";
+                    break;
+                case 'g': resultat += "7\uFE0F ";
+                    break;
+                case 'h': resultat += "8\uFE0F ";
+                    break;
+                case 'i': resultat += "9\uFE0F ";
+                    break;
+                case 'j': resultat += "\uD83D\uDD1F ";
+                    break;
+                case 'k': resultat += "1\uFE0F1\uFE0F ";
+                    break;
+                case 'l': resultat += "1\uFE0F2\uFE0F ";
+                    break;
+                case 'm': resultat += "1\uFE0F3\uFE0F ";
+                    break;
+                case 'n': resultat += "1\uFE0F4\uFE0F ";
+                    break;
+                case 'o': resultat += "1\uFE0F5\uFE0F ";
+                    break;
+                case 'p': resultat += "1\uFE0F6\uFE0F ";
+                    break;
+                case 'q': resultat += "1\uFE0F7\uFE0F ";
+                    break;
+                case 'r': resultat += "1\uFE0F8\uFE0F ";
+                    break;
+                case 's': resultat += "2\uFE0F9\uFE0F ";
+                    break;
+                case 't': resultat += "2\uFE0F0\uFE0F ";
+                    break;
+                case 'u': resultat += "2\uFE0F1\uFE0F ";
+                    break;
+                case 'v': resultat += "2\uFE0F2\uFE0F ";
+                    break;
+                case 'w': resultat += "2\uFE0F3\uFE0F ";
+                    break;
+                case 'x': resultat += "2\uFE0F4\uFE0F ";
+                    break;
+                case 'y': resultat += "2\uFE0F5\uFE0F ";
+                    break;
+                case 'z': resultat += "1\uFE0F6\uFE0F ";
+                    break;
+                default: resultat += question.toLowerCase(Locale.FRENCH).charAt(i);
+            }
+            resultat += " ";
+        }
+        resultat += "||";
         return resultat;
     }
 }

@@ -12,7 +12,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/*
+/*
  * Backing bean pour la page JSF index.xhtml.
  * Portée view pour conserver l'état de la conversation qui dure pendant plusieurs requêtes HTTP.
  * La portée view nécessite l'implémentation de Serializable (le backing bean peut être mis en mémoire secondaire).
